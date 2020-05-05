@@ -12,12 +12,15 @@ const theme = {
   primaryTextColor: "#f4f4ea",
 
   heroBackground: heroBg,
-
   heroTitleColor: "#222",
 
   scrollLineColor: "white",
+
   navBackgroundColor: "#222",
   navTextColor: "#f4f4ea",
+
+  buttonBackgroundColor: "#121212",
+  buttonTextColor: "#f4f4ea",
 };
 
 export default theme;

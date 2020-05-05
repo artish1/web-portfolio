@@ -5,15 +5,13 @@ import { Route } from "react-router-dom";
 import { withTheme } from "styled-components";
 
 import Home from "./components/organisms/Home";
-import Hero from "./components/molecules/Hero";
 
 function App({ theme }) {
   //Change body color based off of theme.
   useEffect(() => {
     document.querySelector("body").style.backgroundColor =
       theme.backgroundColor;
-    console.log(theme);
-  }, []);
+  }, [theme]);
 
   return (
     <div className="App">
