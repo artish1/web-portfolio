@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 
 import { Route } from "react-router-dom";
+import { withTheme } from "styled-components";
 
 import Home from "./components/organisms/Home";
+import Hero from "./components/molecules/Hero";
 
-/*
- primary: #c07c84,
-  secondary: #6c5b7b,
-  accent: #fffcf1,
-  texts: #05386b
-*/
+function App({ theme }) {
+  //Change body color based off of theme.
+  useEffect(() => {
+    document.querySelector("body").style.backgroundColor =
+      theme.backgroundColor;
+    console.log(theme);
+  }, []);
 
-function App() {
   return (
     <div className="App">
       <Route exact path="/">
@@ -24,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default withTheme(App);
