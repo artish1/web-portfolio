@@ -8,8 +8,8 @@ const Root = styled.div`
 
   box-sizing: border-box;
 
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
 
   cursor: pointer;
 `;
@@ -30,11 +30,11 @@ const ImageContainer = styled.div`
   }
 `;
 
-const ProjectArtifact = ({ image, title }) => {
+const ProjectArtifact = ({ image, title, description }) => {
   const [popup, setPopup] = useState(false);
   return (
     <Root>
-      {popup && <ProjectPopup />}
+      {popup && <ProjectPopup title={title} description={description} />}
       <ImageContainer
         onMouseEnter={() => setPopup(true)}
         onMouseLeave={() => setPopup(false)}
