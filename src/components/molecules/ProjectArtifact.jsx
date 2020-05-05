@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
+import ProjectPopup from "./ProjectPopup";
+
 const Root = styled.div`
-//   background: url(${(props) => props.image});
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
+  position: relative;
 
   box-sizing: border-box;
 
@@ -13,13 +12,6 @@ const Root = styled.div`
   height: 200px;
 
   cursor: pointer;
-
-//   filter: grayscale(100%);
-
-//   transition: filter 0.2s linear;
-//   &:hover {
-//     filter: grayscale(0%);
-//   }
 `;
 
 const ImageContainer = styled.div`
@@ -39,9 +31,15 @@ const ImageContainer = styled.div`
 `;
 
 const ProjectArtifact = ({ image, title }) => {
+  const [popup, setPopup] = useState(false);
   return (
     <Root>
-      <ImageContainer image={image} />
+      {popup && <ProjectPopup />}
+      <ImageContainer
+        onMouseEnter={() => setPopup(true)}
+        onMouseLeave={() => setPopup(false)}
+        image={image}
+      />
     </Root>
   );
 };
