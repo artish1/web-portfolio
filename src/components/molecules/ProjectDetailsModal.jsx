@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled, { keyframes } from "styled-components";
 import closeIconImg from "../../img/close_icon.png";
 import Button from "./Button";
+
+import image2 from "../../img/image2.jpg";
+import ImageViewModal from "./ImageViewModal";
 
 const showAnim = keyframes`
     from {
@@ -27,8 +30,6 @@ const Root = styled.div`
   margin-left: -${(props) => (props.width ? parseInt(props.width) / 2 : "300")}px;
 
   background-color: ${(props) => props.theme.backgroundColor};
-
-  //Overrides cursor pointer from ProjectArtifact
   cursor: auto;
 
   box-shadow: 0px 0px 11px 4px #00000055;
@@ -37,6 +38,7 @@ const Root = styled.div`
   z-index: 5;
 
   box-sizing: border-box;
+  border-radius: 4px;
 `;
 
 const Container = styled.div`
@@ -67,6 +69,7 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.primaryTextColor};
   font-size: 30.5px;
   font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 4px;
 `;
 
 const Description = styled.p`
@@ -74,6 +77,7 @@ const Description = styled.p`
   font-size: 16.2px;
   margin: 10px;
   align-self: flex-end;
+  opacity: 0.65;
 `;
 
 const InfoContainer = styled.div`
@@ -94,14 +98,60 @@ const ButtonContainer = styled.div`
   justify-content: space-around;
 `;
 
-const StackContainer = styled.div`
+const List = styled.ul`
+  color: ${({ theme }) => theme.primaryTextColor};
+`;
+
+const ListItem = styled.li`
+  margin-bottom: 5px;
+  font-size: 18px;
+  opacity: 0.7;
+`;
+
+const PictureGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(${(props) => props.imageSize}, 1fr)
+  );
+  width: 100%;
+  padding: 0px 10px;
+  margin-top: 10px;
 `;
 
 const PictureContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10px;
+`;
+
+const HalfContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px;
+  box-sizing: border-box;
+`;
+
+const ListContainer = styled.div`
+  box-sizing: border-box;
+`;
+
+const ListTitle = styled.h3`
+  color: ${({ theme }) => theme.primaryTextColor};
+  font-size: 22.5px;
+  font-family: "Josefin Sans", sans-serif;
+`;
+
+const SomeContainer = styled.div`
+  box-sizing: border-box;
+`;
+
+const Picture = styled.div`
+  height: ${(props) => props.imageSize};
+  width: ${(props) => props.imageSize};
+  background: url(${(props) => props.image});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const ProjectDetailsModal = ({
@@ -113,28 +163,72 @@ const ProjectDetailsModal = ({
   webUrl,
   codeUrl,
 }) => {
+  const [slideModal, setSlideModal] = useState(false);
+
+  const imageSize = "110px";
   return (
-    <Root width="800px" height="750px">
+    <Root width="600px" height="700px">
+      {slideModal && <ImageViewModal />}
       <Container>
         <CloseIconButton onClick={onClose} image={closeIconImg} />
       </Container>
       <InfoContainer>
-        <div>
+        <SomeContainer>
           <Title>{title}</Title>
           <Description>{description}</Description>
-        </div>
+          <HalfContainer>
+            <ListContainer>
+              <ListTitle>Stack</ListTitle>
+              <List>
+                <ListItem>React</ListItem>
+                <ListItem>React</ListItem>
+                <ListItem>React</ListItem>
+                <ListItem>React</ListItem>
+              </List>
+            </ListContainer>
+
+            <ListContainer>
+              <ListTitle>Highlights</ListTitle>
+              <List>
+                <ListItem>React</ListItem>
+                <ListItem>React</ListItem>
+                <ListItem>React</ListItem>
+                <ListItem>React</ListItem>
+              </List>
+            </ListContainer>
+          </HalfContainer>
+          <PictureContainer>
+            <ListTitle>Screenshots</ListTitle>
+            <PictureGrid imageSize={imageSize}>
+              <Picture
+                onClick={() => setSlideModal(true)}
+                imageSize={imageSize}
+                image={image2}
+              />
+              <Picture imageSize={imageSize} image={image2} />
+              <Picture imageSize={imageSize} image={image2} />
+              <Picture imageSize={imageSize} image={image2} />
+
+              <Picture imageSize={imageSize} image={image2} />
+              <Picture imageSize={imageSize} image={image2} />
+              <Picture imageSize={imageSize} image={image2} />
+            </PictureGrid>
+          </PictureContainer>
+        </SomeContainer>
+
         <ButtonContainer>
           <Button
-            backgroundColor=""
-            width="45%"
-            height="40px"
+            backgroundColor="#FF5D5D"
+            width="47%"
+            height="38px"
             onClick={() => (window.location.href = webUrl)}
           >
             Visit
           </Button>
           <Button
-            width="45%"
-            height="40px"
+            backgroundColor="#FF5D5D"
+            width="47%"
+            height="38px"
             onClick={() => (window.location.href = codeUrl)}
           >
             View Code

@@ -12,7 +12,7 @@ const Container = styled.button`
     props.backgroundColor || props.theme.buttonBackgroundColor};
   color: ${(props) => props.color || props.theme.buttonTextColor};
 
-  font-size: 18px;
+  font-size: 17.5px;
 
   // font-family: "Josefin Sans", sans-serif;
   font-family: "Montserrat";
