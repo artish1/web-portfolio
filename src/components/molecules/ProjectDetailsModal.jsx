@@ -10,14 +10,14 @@ import ImageViewModal from "./ImageViewModal";
 const showAnim = keyframes`
     from {
         opacity: 0;
-        transform: translate(-200px, -50%);
+        transform: translate(-70%, -50%);
 
     }
 
     to {
         opacity: 1;
         
-        transform: translate(0px, -50%);
+        transform: translate(-50%, -50%);
     }
 `;
 
@@ -30,9 +30,7 @@ const Root = styled.div`
   // Center Modal
   top: 50%;
   left: 50%;
-
-  transform: translateY(-50%);
-  margin-left: -${(props) => (props.width ? parseInt(props.width) / 2 : "300")}px;
+  transform: translate(-50%, -50%);
 
   background-color: ${(props) => props.theme.backgroundColor};
   cursor: auto;
@@ -44,6 +42,10 @@ const Root = styled.div`
 
   box-sizing: border-box;
   border-radius: 4px;
+
+  @media (max-width: 635px) {
+    width: 350px;
+  }
 `;
 
 const Container = styled.div`
@@ -136,7 +138,7 @@ const PictureGrid = styled.div`
 `;
 
 const PictureContainer = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 `;
 
 const HalfContainer = styled.div`
