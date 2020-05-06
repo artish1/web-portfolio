@@ -7,14 +7,16 @@ const Container = styled.button`
   outline: none;
   border: none;
   text-decoration: none;
+
   background-color: ${(props) =>
     props.backgroundColor || props.theme.buttonBackgroundColor};
   color: ${(props) => props.color || props.theme.buttonTextColor};
 
-  font-size: 21.5px;
+  font-size: 18px;
 
-  //   font-family: "Montserrat";
-  font-family: "Quicksand", sans-serif;
+  // font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat";
+  // font-family: "Quicksand", sans-serif;
   font-weight: 300;
 
   margin: ${(props) => props.margin};

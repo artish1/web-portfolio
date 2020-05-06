@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import ProjectPopup from "./ProjectPopup";
+import ProjectDetailsModal from "./ProjectDetailsModal";
 
 const Root = styled.div`
   position: relative;
@@ -30,16 +31,37 @@ const ImageContainer = styled.div`
   }
 `;
 
-const ProjectArtifact = ({ image, title, description }) => {
+const ProjectArtifact = ({
+  image,
+  title,
+  description,
+  webUrl,
+  codeUrl,
+  pictures,
+}) => {
   const [popup, setPopup] = useState(false);
+  const [modal, setModal] = useState(false);
   return (
     <Root>
       {popup && <ProjectPopup title={title} description={description} />}
       <ImageContainer
         onMouseEnter={() => setPopup(true)}
         onMouseLeave={() => setPopup(false)}
+        onClick={() => setModal(true)}
         image={image}
       />
+
+      {modal && (
+        <ProjectDetailsModal
+          title={title}
+          height="700px"
+          description={description}
+          webUrl={webUrl}
+          codeUrl={codeUrl}
+          pictures={pictures}
+          onClose={() => setModal(false)}
+        />
+      )}
     </Root>
   );
 };

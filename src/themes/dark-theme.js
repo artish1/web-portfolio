@@ -19,8 +19,8 @@ const theme = {
   navBackgroundColor: "#222",
   navTextColor: "#f4f4ea",
 
-  buttonBackgroundColor: "#121212",
-  buttonTextColor: "#f4f4ea",
+  buttonBackgroundColor: "#05386b",
+  buttonTextColor: "#fff",
 };
 
 export default theme;

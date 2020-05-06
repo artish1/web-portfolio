@@ -7,7 +7,6 @@ import imgPortfolio from "../../img/project_portfolio.jpg";
 import imgTrash from "../../img/project_trash.jpg";
 import imgGrace from "../../img/project_grace.jpg";
 import imgWord from "../../img/project_word.jpg";
-import img1 from "../../img/image1.jpg";
 import img2 from "../../img/image2.jpg";
 
 const Container = styled.div`
@@ -21,7 +20,23 @@ const Container = styled.div`
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
+  gap: 20px;
+
+  @media (max-width: 1240px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 1034px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 825px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 570px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const Title = styled.h2`
@@ -42,6 +57,8 @@ const Projects = () => {
           title="Portfolio Website"
           description="My personal portfolio website (This website)."
           image={imgPortfolio}
+          webUrl="https://www.google.com"
+          codeUrl="https://www.youtube.com"
         />
         <ProjectArtifact
           title="The Trash Panda"
@@ -59,11 +76,11 @@ const Projects = () => {
           image={imgWord}
         />
 
-        <ProjectArtifact image={img1} />
-        <ProjectArtifact image={img1} />
-        <ProjectArtifact image={img1} />
         <ProjectArtifact image={img2} />
-        <ProjectArtifact image={img1} />
+        <ProjectArtifact image={img2} />
+        <ProjectArtifact image={img2} />
+        <ProjectArtifact image={img2} />
+        <ProjectArtifact image={img2} />
       </ProjectGrid>
     </Container>
   );
