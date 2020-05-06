@@ -38,6 +38,7 @@ const ProjectArtifact = ({
   webUrl,
   codeUrl,
   pictures,
+  stack,
 }) => {
   const [popup, setPopup] = useState(false);
   const [modal, setModal] = useState(false);
@@ -59,6 +60,7 @@ const ProjectArtifact = ({
           webUrl={webUrl}
           codeUrl={codeUrl}
           pictures={pictures}
+          stack={stack}
           onClose={() => setModal(false)}
         />
       )}

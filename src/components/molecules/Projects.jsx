@@ -50,6 +50,8 @@ const Title = styled.h2`
 
 const portfolioPics = [img2, imgPortfolio, imgGrace, imgWord];
 
+const stackExample = ["React", "Styled-Components", "Basic HTML/Javascript"];
+
 const Projects = () => {
   return (
     <Container>
@@ -62,6 +64,7 @@ const Projects = () => {
           webUrl="https://www.google.com"
           codeUrl="https://www.youtube.com"
           pictures={portfolioPics}
+          stack={stackExample}
         />
         <ProjectArtifact
           title="The Trash Panda"

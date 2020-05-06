@@ -10,13 +10,14 @@ import ImageViewModal from "./ImageViewModal";
 const showAnim = keyframes`
     from {
         opacity: 0;
-        transform: translateX(-200px);
+        transform: translate(-200px, -50%);
+
     }
 
     to {
         opacity: 1;
         
-        transform: translateX(0px);
+        transform: translate(0px, -50%);
     }
 `;
 
@@ -29,7 +30,8 @@ const Root = styled.div`
   // Center Modal
   top: 50%;
   left: 50%;
-  margin-top: -${(props) => (props.height ? parseInt(props.height) / 2 : "250")}px;
+
+  transform: translateY(-50%);
   margin-left: -${(props) => (props.width ? parseInt(props.width) / 2 : "300")}px;
 
   background-color: ${(props) => props.theme.backgroundColor};
@@ -116,6 +118,7 @@ const ListItem = styled.li`
   margin-bottom: 5px;
   font-size: 18px;
   opacity: 0.7;
+  text-align: left;
 `;
 
 const PictureGrid = styled.div`
@@ -177,6 +180,7 @@ const ProjectDetailsModal = ({
   title,
   description,
   stack,
+  highlights,
   pictures,
   onClose,
   webUrl,
@@ -192,7 +196,7 @@ const ProjectDetailsModal = ({
   };
 
   return (
-    <Root width="600px" height="700px">
+    <Root width="600px" height="70%">
       {slideModal && (
         <ImageViewModal
           pictures={pictures}
@@ -211,20 +215,20 @@ const ProjectDetailsModal = ({
             <ListContainer>
               <ListTitle>Stack</ListTitle>
               <List>
-                <ListItem>React</ListItem>
-                <ListItem>React</ListItem>
-                <ListItem>React</ListItem>
-                <ListItem>React</ListItem>
+                {stack &&
+                  stack.map((stackItem, key) => (
+                    <ListItem key={key}>{stackItem}</ListItem>
+                  ))}
               </List>
             </ListContainer>
 
             <ListContainer>
               <ListTitle>Highlights</ListTitle>
               <List>
-                <ListItem>React</ListItem>
-                <ListItem>React</ListItem>
-                <ListItem>React</ListItem>
-                <ListItem>React</ListItem>
+                {highlights &&
+                  highlights.map((highlight, key) => (
+                    <ListItem key={key}>{highlight}</ListItem>
+                  ))}
               </List>
             </ListContainer>
           </HalfContainer>
