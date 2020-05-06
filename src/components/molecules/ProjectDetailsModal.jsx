@@ -103,6 +103,9 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 `;
 
 const ButtonContainer = styled.div`
@@ -142,6 +145,10 @@ const HalfContainer = styled.div`
   width: 100%;
   padding: 0px 20px;
   box-sizing: border-box;
+
+  @media (max-width: 660px) {
+    flex-direction: column;
+  }
 `;
 
 const ListContainer = styled.div`
