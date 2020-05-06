@@ -10,10 +10,13 @@ import ImageViewModal from "./ImageViewModal";
 const showAnim = keyframes`
     from {
         opacity: 0;
+        transform: translateX(-200px);
     }
 
     to {
         opacity: 1;
+        
+        transform: translateX(0px);
     }
 `;
 
@@ -148,12 +151,21 @@ const SomeContainer = styled.div`
 const Picture = styled.div`
   height: ${(props) => props.imageSize};
   width: ${(props) => props.imageSize};
-  background: url(${(props) => props.image});
+  background: url(${(props) => props.image || image2});
+  background-color: white;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-`;
 
+  cursor: pointer;
+
+  filter: brightness(100%);
+
+  transition: filter 0.2s linear;
+  &:hover {
+    filter: brightness(150%);
+  }
+`;
 const ProjectDetailsModal = ({
   title,
   description,
@@ -164,11 +176,19 @@ const ProjectDetailsModal = ({
   codeUrl,
 }) => {
   const [slideModal, setSlideModal] = useState(false);
-
+  const [clickedIndex, setClickedIndex] = useState(0);
   const imageSize = "110px";
+
+  const handlePictureClick = (clickedIndex) => {
+    setClickedIndex(true);
+    setSlideModal(true);
+  };
+
   return (
     <Root width="600px" height="700px">
-      {slideModal && <ImageViewModal />}
+      {slideModal && (
+        <ImageViewModal pictures={pictures} start={clickedIndex} />
+      )}
       <Container>
         <CloseIconButton onClick={onClose} image={closeIconImg} />
       </Container>
@@ -200,18 +220,15 @@ const ProjectDetailsModal = ({
           <PictureContainer>
             <ListTitle>Screenshots</ListTitle>
             <PictureGrid imageSize={imageSize}>
-              <Picture
-                onClick={() => setSlideModal(true)}
-                imageSize={imageSize}
-                image={image2}
-              />
-              <Picture imageSize={imageSize} image={image2} />
-              <Picture imageSize={imageSize} image={image2} />
-              <Picture imageSize={imageSize} image={image2} />
-
-              <Picture imageSize={imageSize} image={image2} />
-              <Picture imageSize={imageSize} image={image2} />
-              <Picture imageSize={imageSize} image={image2} />
+              {pictures &&
+                pictures.map((pic, key) => (
+                  <Picture
+                    onClick={() => handlePictureClick(key)}
+                    imageSize={imageSize}
+                    image={image2}
+                    key={key}
+                  />
+                ))}
             </PictureGrid>
           </PictureContainer>
         </SomeContainer>

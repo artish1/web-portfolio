@@ -15,15 +15,17 @@ const Root = styled.div`
   margin-left: -${(props) => (props.width ? parseInt(props.width) / 2 : "300")}px;
 
   background-color: ${(props) => props.theme.backgroundColor};
-  cursor: auto;
 
   box-shadow: 0px 0px 11px 4px #00000055;
-
   z-index: 7;
 
   box-sizing: border-box;
   border-radius: 4px;
 `;
+
+const ImageSlide = styled.div``;
+
+const IconButton = styled.div``;
 
 const ImageViewModal = () => {
   return <Root image="800px" width="800px"></Root>;

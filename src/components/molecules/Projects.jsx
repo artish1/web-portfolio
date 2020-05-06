@@ -48,6 +48,8 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.primaryTextColor};
 `;
 
+const portfolioPics = [img2, img2, img2, img2, img2, img2, img2];
+
 const Projects = () => {
   return (
     <Container>
@@ -59,6 +61,7 @@ const Projects = () => {
           image={imgPortfolio}
           webUrl="https://www.google.com"
           codeUrl="https://www.youtube.com"
+          pictures={portfolioPics}
         />
         <ProjectArtifact
           title="The Trash Panda"

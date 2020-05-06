@@ -5,12 +5,12 @@ import styled, { keyframes } from "styled-components";
 const popupAnim = keyframes`
 
     from {
-        // transform: translate(0, -555px);
+        transform: translate(21.5%, -555px);
         opacity: 0;
     }
 
     to {
-        // transform: translate(0, -425px);
+        transform: translate(21.5%, -425px);
         opacity: 1;
     }
 `;
