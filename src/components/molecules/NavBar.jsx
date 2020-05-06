@@ -28,7 +28,7 @@ const LinksContainer = styled.nav`
 
   a {
     text-decoration: none;
-    color: white;
+    color: ${({ theme }) => theme.navTextColor};
     margin-left: 15px;
     font-size: 16.5px;
   }

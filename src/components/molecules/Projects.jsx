@@ -48,7 +48,7 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.primaryTextColor};
 `;
 
-const portfolioPics = [img2, img2, img2, img2, img2, img2, img2];
+const portfolioPics = [img2, imgPortfolio, imgGrace, imgWord];
 
 const Projects = () => {
   return (

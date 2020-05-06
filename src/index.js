@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 
 // Themes
 import defaultTheme from "./themes/dark-theme";
+// import lightTheme from "./themes/light-theme";
 
 ReactDOM.render(
   <React.StrictMode>

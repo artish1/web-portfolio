@@ -8,17 +8,17 @@ import heroBg from "../img/background.jpg";
 */
 
 const theme = {
-  backgroundColor: "#121212",
-  // backgroundColor: "white",
-  primaryTextColor: "#f4f4ea",
-  // primaryTextColor: "black",
+  //   backgroundColor: "#121212",
+  backgroundColor: "white",
+  //   primaryTextColor: "#f4f4ea",
+  primaryTextColor: "black",
   heroBackground: heroBg,
   heroTitleColor: "#222",
 
-  scrollLineColor: "white",
+  scrollLineColor: "black",
 
-  navBackgroundColor: "#222",
-  navTextColor: "#f4f4ea",
+  navBackgroundColor: "white",
+  navTextColor: "black",
 
   buttonBackgroundColor: "#05386b",
   buttonTextColor: "#fff",

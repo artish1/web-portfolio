@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 import closeIcon from "../../img/close_icon.png";
 
+import leftArrow from "../../img/left_arrow.png";
+import rightArrow from "../../img/right_arrow.png";
+
 const Root = styled.div`
   position: fixed;
 
@@ -44,8 +47,8 @@ const SlideContainer = styled.div`
 `;
 
 const IconButton = styled.div`
-  width: 30px;
-  height: 30px;
+  width: ${(props) => props.width || "30px"};
+  height: ${(props) => props.height || "30px"};
   background-image: url(${(props) => props.image});
   background-position: center;
   background-size: cover;
@@ -55,8 +58,39 @@ const IconButton = styled.div`
 
 const CloseButton = styled.div`
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
+
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+const ArrowButton = styled.div`
+  position: absolute;
+
+  ${(props) => {
+    return props.left
+      ? `
+    //Left
+    left: 20px;
+    `
+      : `
+    //Right
+    right: 20px;
+    `;
+  }}
+
+  top: ${(props) => parseInt(props.height) / 2}px;
+
+
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const ImageViewModal = ({ pictures, start, onClose }) => {
@@ -64,12 +98,40 @@ const ImageViewModal = ({ pictures, start, onClose }) => {
   console.log("Pictures: ", pictures);
 
   console.log("Current picture index: ", currentIndex);
+
+  const handleNext = () => {
+    let next = currentIndex + 1;
+    if (next >= pictures.length) {
+      next = 0;
+    }
+
+    setCurrentIndex(next);
+  };
+
+  const handlePrevious = () => {
+    let next = currentIndex - 1;
+    if (next < 0) {
+      next = pictures.length - 1;
+    }
+
+    setCurrentIndex(next);
+  };
+  const height = "800px";
+  const width = "800px";
   return (
     <Root height="800px" width="800px">
       <SlideContainer>
         <CloseButton onClick={onClose}>
           <IconButton image={closeIcon} />
         </CloseButton>
+        <ArrowButton height={height} left onClick={handlePrevious}>
+          <IconButton image={leftArrow} />
+        </ArrowButton>
+
+        <ArrowButton height={height} right onClick={handleNext}>
+          <IconButton image={rightArrow} />
+        </ArrowButton>
+
         <ImageSlide image={pictures[currentIndex]} />
       </SlideContainer>
     </Root>

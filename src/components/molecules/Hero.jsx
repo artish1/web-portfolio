@@ -10,7 +10,7 @@ const Root = styled.div`
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 75vh; /* if you don't want it to take up the full screen, reduce this number */
+  height: 85vh; /* if you don't want it to take up the full screen, reduce this number */
   overflow: hidden;
 
   background: radial-gradient(

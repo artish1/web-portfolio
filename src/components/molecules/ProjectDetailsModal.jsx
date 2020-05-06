@@ -65,6 +65,13 @@ const CloseIconButton = styled.div`
   background-size: cover;
 
   cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.2s linear;
+
+  &:hover {
+    opacity: 1;
+  }
+
   z-index: 10;
 `;
 
@@ -229,7 +236,7 @@ const ProjectDetailsModal = ({
                   <Picture
                     onClick={() => handlePictureClick(key)}
                     imageSize={imageSize}
-                    image={image2}
+                    image={pic}
                     key={key}
                   />
                 ))}
