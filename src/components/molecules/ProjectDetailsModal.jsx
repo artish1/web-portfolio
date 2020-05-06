@@ -180,14 +180,18 @@ const ProjectDetailsModal = ({
   const imageSize = "110px";
 
   const handlePictureClick = (clickedIndex) => {
-    setClickedIndex(true);
+    setClickedIndex(clickedIndex);
     setSlideModal(true);
   };
 
   return (
     <Root width="600px" height="700px">
       {slideModal && (
-        <ImageViewModal pictures={pictures} start={clickedIndex} />
+        <ImageViewModal
+          pictures={pictures}
+          start={clickedIndex}
+          onClose={() => setSlideModal(false)}
+        />
       )}
       <Container>
         <CloseIconButton onClick={onClose} image={closeIconImg} />
