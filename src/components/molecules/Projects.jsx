@@ -3,6 +3,8 @@ import React from "react";
 import styled from "styled-components";
 import ProjectArtifact from "./ProjectArtifact";
 
+import projectData from "../../data/projects";
+
 import imgPortfolio from "../../img/project_portfolio.jpg";
 import imgTrash from "../../img/project_trash.jpg";
 import imgGrace from "../../img/project_grace.jpg";
@@ -57,7 +59,19 @@ const Projects = () => {
     <Container>
       <Title>Projects</Title>
       <ProjectGrid>
-        <ProjectArtifact
+        {projectData.map((proj, key) => (
+          <ProjectArtifact
+            title={proj.title}
+            description={proj.description}
+            image={proj.image}
+            webUrl={proj.webUrl}
+            codeUrl={proj.codeUrl}
+            pictures={proj.pictures}
+            stack={proj.stack}
+            key={key}
+          />
+        ))}
+        {/* <ProjectArtifact
           title="Portfolio Website"
           description="My personal portfolio website (This website)."
           image={imgPortfolio}
@@ -65,8 +79,8 @@ const Projects = () => {
           codeUrl="https://www.youtube.com"
           pictures={portfolioPics}
           stack={stackExample}
-        />
-        <ProjectArtifact
+        /> */}
+        {/* <ProjectArtifact
           title="The Trash Panda"
           description="A PWA (Progressive Web App) that helps users know how and where to recycle through either category selection or image recognition."
           image={imgTrash}
@@ -86,7 +100,7 @@ const Projects = () => {
         <ProjectArtifact image={img2} />
         <ProjectArtifact image={img2} />
         <ProjectArtifact image={img2} />
-        <ProjectArtifact image={img2} />
+        <ProjectArtifact image={img2} /> */}
       </ProjectGrid>
     </Container>
   );
