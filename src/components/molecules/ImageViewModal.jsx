@@ -13,11 +13,13 @@ const Root = styled.div`
   width: ${(props) => props.width || "600px"};
   height: ${(props) => props.height || "600px"};
 
+  max-width: 1000px;
+  max-height: 1000px;
+
   // Center Modal
   top: 50%;
   left: 50%;
-  margin-top: -${(props) => (props.height ? parseInt(props.height) / 2 : "250")}px;
-  margin-left: -${(props) => (props.width ? parseInt(props.width) / 2 : "300")}px;
+  transform: translate(-50%, -50%);
 
   background-color: ${(props) => props.theme.backgroundColor};
 
@@ -31,7 +33,7 @@ const Root = styled.div`
 const ImageSlide = styled.div`
   background: url(${(props) => props.image});
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   padding: 15px;
   height: 100%;
@@ -83,8 +85,8 @@ const ArrowButton = styled.div`
     `;
   }}
 
-  top: ${(props) => parseInt(props.height) / 2}px;
-
+  top: 50%;
+  transform: translateY(-50%);
 
   opacity: 0.6;
   transition: opacity 0.2s linear;
@@ -95,9 +97,6 @@ const ArrowButton = styled.div`
 
 const ImageViewModal = ({ pictures, start, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(start);
-  console.log("Pictures: ", pictures);
-
-  console.log("Current picture index: ", currentIndex);
 
   const handleNext = () => {
     let next = currentIndex + 1;
@@ -116,19 +115,18 @@ const ImageViewModal = ({ pictures, start, onClose }) => {
 
     setCurrentIndex(next);
   };
-  const height = "800px";
-  const width = "800px";
+  const width = "700px";
   return (
-    <Root height="800px" width="800px">
+    <Root height="90vh" width="80vw">
       <SlideContainer>
         <CloseButton onClick={onClose}>
           <IconButton image={closeIcon} />
         </CloseButton>
-        <ArrowButton height={height} left onClick={handlePrevious}>
+        <ArrowButton left onClick={handlePrevious}>
           <IconButton image={leftArrow} />
         </ArrowButton>
 
-        <ArrowButton height={height} right onClick={handleNext}>
+        <ArrowButton right onClick={handleNext}>
           <IconButton image={rightArrow} />
         </ArrowButton>
 
