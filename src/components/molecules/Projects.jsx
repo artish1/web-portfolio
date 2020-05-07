@@ -7,28 +7,32 @@ import projectData from "../../data/projects";
 
 const Container = styled.div`
   margin: 125px 10px;
+  // padding: 125px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 `;
 
 const ProjectGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
   gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  // @media (max-width: 1240px) {
+  //   grid-template-columns: repeat(4, 1fr);
+  // }
 
-  @media (max-width: 1240px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  // @media (max-width: 1034px) {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 
-  @media (max-width: 1034px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (max-width: 825px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @media (max-width: 825px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 
   @media (max-width: 570px) {
     grid-template-columns: repeat(1, 1fr);

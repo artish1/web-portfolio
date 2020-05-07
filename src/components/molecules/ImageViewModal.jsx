@@ -80,11 +80,11 @@ const ArrowButton = styled.div`
     return props.left
       ? `
     //Left
-    left: 20px;
+    left: 30px;
     `
       : `
     //Right
-    right: 20px;
+    right: 30px;
     `;
   }}
 

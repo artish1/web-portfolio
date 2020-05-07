@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
 
 const Root = styled.div`
-  color: ${(props) => props.theme.navTextColor};
-  background-color: ${({ theme }) => theme.navBackgroundColor};
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: ${(props) =>
+    props.isTop ? props.theme.heroTitleColor : props.theme.navTextColor};
+  // background-color: ${({ theme }) => theme.navBackgroundColor};
+  background-color: ${(props) =>
+    props.isTop ? "#00000000" : props.theme.navBackgroundColor};
+  z-index: 100;
+  transition: background-color 0.35s;
+
+
 `;
 
 const Container = styled.div`
@@ -15,7 +25,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   align-items: baseline;
-  padding: 15px;
+  padding: 20px 15px;
 `;
 
 const TitleContainer = styled.div`
@@ -28,19 +38,34 @@ const LinksContainer = styled.nav`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.navTextColor};
+    color: ${(props) =>
+      props.isTop ? props.theme.heroTitleColor : props.theme.navTextColor};
     margin-left: 15px;
     font-size: 16.5px;
   }
 `;
 
 const NavBar = () => {
+  const [isTop, setIsTop] = useState(true);
+  const handleScroll = () => {
+    if (window.pageYOffset < 350) {
+      setIsTop(true);
+    } else setIsTop(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Root>
+    <Root isTop={isTop}>
       <Container>
         <TitleContainer>Mark Artishuk</TitleContainer>
 
-        <LinksContainer>
+        <LinksContainer isTop={isTop}>
           <Link to="/projects">Projects</Link>
           <Link to="/contact">Contact</Link>
         </LinksContainer>
