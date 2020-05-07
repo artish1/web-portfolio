@@ -4,7 +4,6 @@ import styled, { keyframes } from "styled-components";
 import closeIconImg from "../../img/close_icon.png";
 import Button from "./Button";
 
-import image2 from "../../img/image2.jpg";
 import ImageViewModal from "./ImageViewModal";
 
 const showAnim = keyframes`
@@ -146,11 +145,18 @@ const PictureGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(${(props) => props.imageSize}, 1fr)
+    // minmax(${(props) => props.imageSize}, 1fr)
+    ${(props) => props.imageSize}
   );
+
+  justify-items: center;
+  align-items: center;
+
   width: 100%;
   padding: 0px 10px;
+  gap: 15px;
   margin-top: 10px;
+  box-sizing: border-box;
 `;
 
 const PictureContainer = styled.div`
@@ -186,7 +192,7 @@ const SomeContainer = styled.div`
 const Picture = styled.div`
   height: ${(props) => props.imageSize};
   width: ${(props) => props.imageSize};
-  background: url(${(props) => props.image || image2});
+  background: url(${(props) => props.image});
   background-color: white;
   background-position: center;
   background-repeat: no-repeat;
@@ -201,6 +207,7 @@ const Picture = styled.div`
     filter: brightness(150%);
   }
 `;
+
 const ProjectDetailsModal = ({
   title,
   description,

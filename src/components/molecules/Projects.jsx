@@ -5,12 +5,6 @@ import ProjectArtifact from "./ProjectArtifact";
 
 import projectData from "../../data/projects";
 
-import imgPortfolio from "../../img/project_portfolio.jpg";
-import imgTrash from "../../img/project_trash.jpg";
-import imgGrace from "../../img/project_grace.jpg";
-import imgWord from "../../img/project_word.jpg";
-import img2 from "../../img/image2.jpg";
-
 const Container = styled.div`
   margin: 125px 10px;
   display: flex;
@@ -50,10 +44,6 @@ const Title = styled.h2`
   color: ${({ theme }) => theme.primaryTextColor};
 `;
 
-const portfolioPics = [img2, imgPortfolio, imgGrace, imgWord];
-
-const stackExample = ["React", "Styled-Components", "Basic HTML/Javascript"];
-
 const Projects = () => {
   return (
     <Container>
@@ -71,36 +61,6 @@ const Projects = () => {
             key={key}
           />
         ))}
-        {/* <ProjectArtifact
-          title="Portfolio Website"
-          description="My personal portfolio website (This website)."
-          image={imgPortfolio}
-          webUrl="https://www.google.com"
-          codeUrl="https://www.youtube.com"
-          pictures={portfolioPics}
-          stack={stackExample}
-        /> */}
-        {/* <ProjectArtifact
-          title="The Trash Panda"
-          description="A PWA (Progressive Web App) that helps users know how and where to recycle through either category selection or image recognition."
-          image={imgTrash}
-        />
-        <ProjectArtifact
-          title="GTCAG"
-          description="An informative church website that also handles donations, contact forms, event management, and more."
-          image={imgGrace}
-        />
-        <ProjectArtifact
-          title="Word Definitions"
-          description="A simple word look-up application that gives definitions, image references, and more."
-          image={imgWord}
-        />
-
-        <ProjectArtifact image={img2} />
-        <ProjectArtifact image={img2} />
-        <ProjectArtifact image={img2} />
-        <ProjectArtifact image={img2} />
-        <ProjectArtifact image={img2} /> */}
       </ProjectGrid>
     </Container>
   );

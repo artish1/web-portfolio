@@ -1,8 +1,26 @@
+// Project artifact images
 import imgPortfolio from "../img/project_portfolio.jpg";
 import imgTrash from "../img/project_trash.jpg";
 import imgGrace from "../img/project_grace.jpg";
 import imgWord from "../img/project_word.jpg";
-import img2 from "../img/image2.jpg";
+// Trash panda
+import trash_1 from "../img/trash_panda/trash_1.jpg";
+import trash_2 from "../img/trash_panda/trash_2.jpg";
+import trash_3 from "../img/trash_panda/trash_3.jpg";
+import trash_4 from "../img/trash_panda/trash_4.jpg";
+
+//Word Definitions
+import word_1 from "../img/word_definitions/word_1.jpg";
+import word_2 from "../img/word_definitions/word_2.jpg";
+
+//Grace website
+import grace_1 from "../img/grace/grace_1.jpg";
+import grace_2 from "../img/grace/grace_2.jpg";
+import grace_3 from "../img/grace/grace_3.jpg";
+import grace_4 from "../img/grace/grace_4.jpg";
+import grace_5 from "../img/grace/grace_5.jpg";
+import grace_6 from "../img/grace/grace_6.jpg";
+import grace_7 from "../img/grace/grace_7.jpg";
 
 const examplePics = [imgTrash, imgPortfolio, imgGrace, imgWord];
 
@@ -23,7 +41,7 @@ const projectData = [
     image: imgTrash,
     webUrl: "https://www.thetrashpanda.com",
     codeUrl: "https://www.github.com",
-    pictures: examplePics,
+    pictures: [trash_1, trash_2, trash_3, trash_4, imgTrash],
     stack: [
       "React",
       "Styled-Components",
@@ -41,7 +59,7 @@ const projectData = [
     image: imgGrace,
     webUrl: "https://www.google.com",
     codeUrl: "https://www.github.com",
-    pictures: examplePics,
+    pictures: [grace_1, grace_2, grace_3, grace_4, grace_5, grace_6, grace_7],
     stack: [
       "React",
       "Material-UI",
@@ -58,7 +76,7 @@ const projectData = [
     image: imgWord,
     webUrl: "https://react-redux-app-elnq1bwcl.now.sh/",
     codeUrl: "https://github.com/artish1/React-Redux-App/tree/mark-artishuk",
-    pictures: examplePics,
+    pictures: [imgWord, word_1, word_2],
     stack: ["React", "Material-UI", "Basic HTML/CSS/Javascript"],
   },
 ];

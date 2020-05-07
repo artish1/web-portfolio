@@ -30,14 +30,14 @@ const Root = styled.div`
   border-radius: 4px;
 `;
 
-const ImageSlide = styled.div`
-  background: url(${(props) => props.image});
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+const ImageSlide = styled.img`
+  // background: url(${(props) => props.image});
+  // background-position: center;
+  // background-size: contain;
+  // background-repeat: no-repeat;
   padding: 15px;
-  height: 100%;
-
+  width: 100%;
+  object-fit: contain;
   box-sizing: border-box;
 `;
 
@@ -46,6 +46,9 @@ const SlideContainer = styled.div`
   padding: 15px;
   height: 100%;
   box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
 `;
 
 const IconButton = styled.div`
@@ -130,7 +133,10 @@ const ImageViewModal = ({ pictures, start, onClose }) => {
           <IconButton image={rightArrow} />
         </ArrowButton>
 
-        <ImageSlide image={pictures[currentIndex]} />
+        <ImageSlide
+          src={pictures[currentIndex]}
+          image={pictures[currentIndex]}
+        />
       </SlideContainer>
     </Root>
   );
