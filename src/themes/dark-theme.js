@@ -8,8 +8,8 @@ import heroBg from "../img/background.jpg";
 */
 
 const theme = {
-  backgroundColor: "#121212",
-  // backgroundColor: "white",
+  backgroundColor: "#14141c",
+  // backgroundColor: "#121212",
   primaryTextColor: "#f4f4ea",
   // primaryTextColor: "black",
   heroBackground: heroBg,
