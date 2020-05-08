@@ -26,6 +26,11 @@ const Container = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 0px 10px 2px #00000077;
   background-color: ${({ theme }) => theme.backgroundColor};
+
+  @media (max-width: 600px) {
+    padding: 10px;
+    margin: 50px 20px;
+  }
 `;
 
 const Title = styled.h2`
@@ -108,6 +113,10 @@ const IconsContainer = styled.div`
 
 const InfoContainer = styled.div`
   margin: 10px 25px;
+
+  @media (max-width: 600px) {
+    margin: 10px;
+  }
 `;
 
 const SeperateContainer = styled.div`
