@@ -31,7 +31,7 @@ const CenterContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  transform: translateY(-120px);
+  transform: translateY(-80px);
 `;
 
 const Title = styled.span`

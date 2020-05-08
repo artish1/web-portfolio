@@ -24,7 +24,7 @@ const Root = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
 
   box-shadow: 0px 0px 11px 4px #00000055;
-  z-index: 12;
+  z-index: 500;
 
   box-sizing: border-box;
   border-radius: 4px;
@@ -120,7 +120,7 @@ const ImageViewModal = ({ pictures, start, onClose }) => {
   };
   const width = "700px";
   return (
-    <Root height="90vh" width="80vw">
+    <Root height="82vh" width="94vw">
       <SlideContainer>
         <CloseButton onClick={onClose}>
           <IconButton image={closeIcon} />

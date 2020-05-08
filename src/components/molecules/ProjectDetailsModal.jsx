@@ -229,7 +229,7 @@ const ProjectDetailsModal = ({
   };
 
   return (
-    <Root width="600px" height="70%">
+    <Root width="600px" height="73%">
       {slideModal && (
         <ImageViewModal
           pictures={pictures}
