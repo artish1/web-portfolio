@@ -10,7 +10,7 @@ const Root = styled.div`
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 85vh; /* if you don't want it to take up the full screen, reduce this number */
+  height: 100vh;
   overflow: hidden;
 
   background: radial-gradient(
@@ -73,6 +73,12 @@ const HeroButton = styled(Button)`
 `;
 
 const Hero = () => {
+  const handleClick = () => {
+    document
+      .getElementById("projects")
+      .scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
     <Root>
       <CenterContainer>
@@ -82,12 +88,12 @@ const Hero = () => {
         <SubTitle>Software Engineer</SubTitle>
 
         <HeroButton
-          // backgroundColor="#05386b"
+          onClick={handleClick}
           color="white"
           margin="25px 0px 0px 0px"
           width="350px"
         >
-          Hire me
+          View my work
         </HeroButton>
       </CenterContainer>
     </Root>

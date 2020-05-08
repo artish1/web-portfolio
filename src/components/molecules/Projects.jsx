@@ -50,7 +50,7 @@ const Title = styled.h2`
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id="projects">
       <Title>Projects</Title>
       <ProjectGrid>
         {projectData.map((proj, key) => (

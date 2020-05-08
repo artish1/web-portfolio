@@ -117,7 +117,7 @@ const SeperateContainer = styled.div`
 
 const ContactInfo = () => {
   return (
-    <Root>
+    <Root id="contact">
       <Container>
         <Title>About Me</Title>
 

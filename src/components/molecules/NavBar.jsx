@@ -60,14 +60,25 @@ const NavBar = () => {
     };
   }, []);
 
+  const handleClickScroll = (e, toId) => {
+    e.preventDefault();
+    document
+      .getElementById(toId)
+      .scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
     <Root isTop={isTop}>
       <Container>
         <TitleContainer>Mark Artishuk</TitleContainer>
 
         <LinksContainer isTop={isTop}>
-          <Link to="/projects">Projects</Link>
-          <Link to="/contact">Contact</Link>
+          <a onClick={(e) => handleClickScroll(e, "projects")} href="#projects">
+            Projects
+          </a>
+          <a onClick={(e) => handleClickScroll(e, "contact")} href="#contact">
+            Contact
+          </a>
         </LinksContainer>
       </Container>
     </Root>
