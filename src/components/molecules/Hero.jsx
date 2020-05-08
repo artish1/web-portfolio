@@ -15,9 +15,9 @@ const Root = styled.div`
 
   background: radial-gradient(
       ellipse at center,
-      rgba(0, 0, 0, 0.07) 0%,
-      rgba(0, 0, 0, 0.2) 51%,
-      rgba(0, 0, 0, 0.55) 100%
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 65%,
+      rgba(0, 0, 0, 0.4) 100%
     ),
     url(${({ theme }) => theme.heroBackground}) no-repeat center center scroll;
   background-attachment: fixed;

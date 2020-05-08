@@ -79,7 +79,7 @@ const AboutDescription = styled.p`
 const IconContainer = styled.a`
   width: 45px;
   height: 45px;
-  color: #ff9f58;
+  color: ${({ theme }) => theme.buttonBackgroundColor};
   margin-bottom: 20px;
 
   &:hover {
