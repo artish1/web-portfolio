@@ -5,25 +5,25 @@ import styled, { keyframes } from "styled-components";
 const popupAnim = keyframes`
 
     from {
-        transform: translate(21.5%, -455px);
+        transform: translate(21.5%, -400px);
         opacity: 0;
     }
 
     to {
-        transform: translate(21.5%, -325px);
+        transform: translate(21.5%, -250px);
         opacity: 1;
     }
 `;
 
 const Root = styled.div`
   position: absolute;
-  height: 300px;
+  height: 225px;
   width: 300px;
 
   top: 0;
   left: -50%;
 
-  transform: translate(21.5%, -325px);
+  transform: translate(21.5%, -250px);
 
   background-color: white;
 

@@ -68,6 +68,10 @@ const NameContainer = styled.div``;
   texts: #05386b
 */
 
+const HeroButton = styled(Button)`
+  // box-shadow: 0px 0px 10px 2px #00000088;
+`;
+
 const Hero = () => {
   return (
     <Root>
@@ -77,14 +81,14 @@ const Hero = () => {
         </NameContainer>
         <SubTitle>Software Engineer</SubTitle>
 
-        <Button
-          backgroundColor="#05386b"
-          // color="black"
+        <HeroButton
+          // backgroundColor="#05386b"
+          color="white"
           margin="25px 0px 0px 0px"
           width="350px"
         >
           Hire me
-        </Button>
+        </HeroButton>
       </CenterContainer>
     </Root>
   );

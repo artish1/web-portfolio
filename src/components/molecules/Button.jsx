@@ -12,6 +12,8 @@ const Container = styled.button`
     props.backgroundColor || props.theme.buttonBackgroundColor};
   color: ${(props) => props.color || props.theme.buttonTextColor};
 
+  // background-image: linear-gradient(0.40turn, #ffa500, #ffcba4);
+
   font-size: 17.5px;
 
   // font-family: "Josefin Sans", sans-serif;

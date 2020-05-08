@@ -16,10 +16,16 @@ import ReactIcon from "../svgs/ReactIcon";
 import ReduxIcon from "../svgs/ReduxIcon";
 import GitIcon from "../svgs/GitIcon";
 
-const Root = styled.div``;
+const Root = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
 
 const Title = styled.h2`
   color: ${({ theme }) => theme.primaryTextColor};
+  // color: #efa48b;
   margin: 0;
   margin-bottom: 50px;
   font-family: "Montserrat";
@@ -33,6 +39,14 @@ const CenterContainer = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
+  max-width: 1000px;
+  margin: 0px 10px;
+
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 8px 3px #00000055;
+  // background-color: #efa48b;
+  // background-color: #111;
 `;
 
 const SkillsGrid = styled.div`
@@ -51,8 +65,8 @@ const SkillsGrid = styled.div`
 const Skills = () => {
   return (
     <Root>
-      <Title>Skills</Title>
       <CenterContainer>
+        <Title>Skills</Title>
         <SkillsGrid>
           <Skill title="Html5">
             <HtmlIcon />

@@ -31,10 +31,6 @@ const Root = styled.div`
 `;
 
 const ImageSlide = styled.img`
-  // background: url(${(props) => props.image});
-  // background-position: center;
-  // background-size: contain;
-  // background-repeat: no-repeat;
   padding: 15px;
   width: 100%;
   object-fit: contain;

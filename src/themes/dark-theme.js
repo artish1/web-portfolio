@@ -20,7 +20,8 @@ const theme = {
   navBackgroundColor: "#222",
   navTextColor: "#f4f4ea",
 
-  buttonBackgroundColor: "#05386b",
+  // buttonBackgroundColor: "#e2744d",
+  buttonBackgroundColor: "#ffa500",
   buttonTextColor: "#fff",
 };
 

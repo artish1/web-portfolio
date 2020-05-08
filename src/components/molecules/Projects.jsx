@@ -6,7 +6,7 @@ import ProjectArtifact from "./ProjectArtifact";
 import projectData from "../../data/projects";
 
 const Container = styled.div`
-  margin: 125px 10px;
+  margin: 125px 10px 100px 10px;
   // padding: 125px 10px;
   display: flex;
   flex-direction: column;

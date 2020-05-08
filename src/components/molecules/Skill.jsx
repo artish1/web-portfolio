@@ -15,7 +15,7 @@ const Root = styled.div`
   position: relative;
   width: 50px;
   height: 50px;
-  color: #fff;
+  color: ${({ theme }) => theme.primaryTextColor};
 `;
 
 const PopupContainer = styled.div`

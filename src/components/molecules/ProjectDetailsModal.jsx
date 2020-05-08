@@ -283,7 +283,7 @@ const ProjectDetailsModal = ({
 
         <ButtonContainer>
           <Button
-            backgroundColor="#FF5D5D"
+            // backgroundColor="#FF5D5D"
             width="47%"
             height="38px"
             onClick={() => (window.location.href = webUrl)}
@@ -291,7 +291,7 @@ const ProjectDetailsModal = ({
             Visit
           </Button>
           <Button
-            backgroundColor="#FF5D5D"
+            // backgroundColor="#FF5D5D"
             width="47%"
             height="38px"
             onClick={() => (window.location.href = codeUrl)}
