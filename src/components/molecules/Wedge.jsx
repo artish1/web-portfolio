@@ -10,6 +10,10 @@ const Root = styled.div`
   background-color: ${({ theme }) => theme.wedgeColor};
 
   clip-path: polygon(0 23%, 100% 71%, 100% 100%, 0% 100%);
+
+  //
+  border-bottom: 1px solid ${({ theme }) => theme.wedgeColor};
+
   z-index: -1;
 `;
 
