@@ -34,10 +34,6 @@ const Title = styled.h2`
   font-weight: 300;
 `;
 
-const FlexContainer = styled.div`
-  display: flex;
-`;
-
 const ContactImage = styled.div`
   width: 200px;
   height: 200px;
@@ -50,20 +46,25 @@ const ContactImage = styled.div`
   background-size: cover;
 
   background-position: center;
-
+  margin-left: 15px;
   box-shadow: 0px 0px 15px 1px #00000088;
 `;
 
 const CategoryTitle = styled.span`
   display: block;
   color: #ffffff66;
+  font-family: "Josefin Sans", sans-serif;
   margin-left: 25px;
   font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 `;
 
 const CategoryValue = styled.span`
   color: white;
+  font-family: "Montserrat";
   margin-left: 10px;
+  opacity: 0.835;
 `;
 
 const AboutDescription = styled.p`
@@ -72,6 +73,7 @@ const AboutDescription = styled.p`
   opacity: 0.5;
   font-family: "Montserrat";
   margin: 20px 30px;
+  font-style: oblique;
 `;
 
 const IconContainer = styled.a`
@@ -85,18 +87,30 @@ const IconContainer = styled.a`
   }
 `;
 
-const IconsContainer = styled(FlexContainer)`
+const SomeContainer = styled.div`
+  display: flex;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const IconsContainer = styled.div`
+  display: flex;
   justify-content: space-around;
+  max-width: 350px;
+  width: 100%;
 `;
 
 const InfoContainer = styled.div`
   margin: 10px 25px;
 `;
 
-// https://via.placeholder.com/728x90.png
-
-const SeperateContainer = styled(FlexContainer)`
+const SeperateContainer = styled.div`
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   height: 100%;
 `;
@@ -107,7 +121,7 @@ const ContactInfo = () => {
       <Container>
         <Title>About Me</Title>
 
-        <FlexContainer>
+        <SomeContainer>
           <ContactImage image={facePic} />
           <InfoContainer>
             <SeperateContainer>
@@ -141,7 +155,7 @@ const ContactInfo = () => {
               </IconsContainer>
             </SeperateContainer>
           </InfoContainer>
-        </FlexContainer>
+        </SomeContainer>
       </Container>
     </Root>
   );
