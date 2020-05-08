@@ -7,8 +7,10 @@ import LinkedinIcon from "../svgs/LinkedinIcon";
 import CodepenIcon from "../svgs/CodepenIcon";
 
 import facePic from "../../img/face_pic.jpg";
+import Wedge from "./Wedge";
 
 const Root = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +25,7 @@ const Container = styled.div`
   padding: 25px;
   box-sizing: border-box;
   box-shadow: 0px 0px 10px 2px #00000077;
+  background-color: ${({ theme }) => theme.backgroundColor};
 `;
 
 const Title = styled.h2`
@@ -118,6 +121,7 @@ const SeperateContainer = styled.div`
 const ContactInfo = () => {
   return (
     <Root id="contact">
+      <Wedge />
       <Container>
         <Title>About Me</Title>
 

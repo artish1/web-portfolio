@@ -20,11 +20,13 @@ const theme = {
   navBackgroundColor: "#222",
   navTextColor: "#f4f4ea",
 
-  // buttonBackgroundColor: "#e2744d",
+  // buttonBackgroundColor: "#ffcba4",
   // buttonBackgroundColor: "#ffa500",
   // buttonBackgroundColor: "#ff9f58",
-  buttonBackgroundColor: "#ffaa6b",
-  buttonTextColor: "#fff",
+  buttonBackgroundColor: "#ffaf8b",
+  buttonTextColor: "white",
+
+  wedgeColor: "#ffcba4",
 };
 
 export default theme;

@@ -9,7 +9,8 @@ import Footer from "../molecules/Footer";
 import Skills from "../molecules/Skills";
 
 const Box = styled.div`
-  height: 1000px;
+  background-color: #ffcba4;
+  height: 400px;
 `;
 
 const Root = styled.div`
@@ -25,8 +26,8 @@ const Home = () => {
       <Projects />
       <Skills />
       <ContactInfo />
+      <Box></Box>
       <Footer />
-      {/* <Box></Box> */}
     </Root>
   );
 };
