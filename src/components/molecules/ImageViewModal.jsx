@@ -87,7 +87,7 @@ const ArrowButton = styled.div`
   top: 50%;
   transform: translateY(-50%);
 
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 0.2s linear;
   &:hover {
     opacity: 1;
@@ -122,11 +122,11 @@ const ImageViewModal = ({ pictures, start, onClose }) => {
           <IconButton image={closeIcon} />
         </CloseButton>
         <ArrowButton left onClick={handlePrevious}>
-          <IconButton image={leftArrow} />
+          <IconButton width="50px" height="50px" image={leftArrow} />
         </ArrowButton>
 
         <ArrowButton right onClick={handleNext}>
-          <IconButton image={rightArrow} />
+          <IconButton width="50px" height="50px" image={rightArrow} />
         </ArrowButton>
 
         <ImageSlide

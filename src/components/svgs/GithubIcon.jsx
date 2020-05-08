@@ -1,6 +1,6 @@
 import React from "react";
 
-const GitIcon = () => {
+const GithubIcon = () => {
   return (
     <svg
       aria-hidden="true"
@@ -20,4 +20,4 @@ const GitIcon = () => {
   );
 };
 
-export default GitIcon;
+export default GithubIcon;

@@ -3,9 +3,6 @@ import styled from "styled-components";
 import Skill from "./Skill";
 
 // Icons
-// import htmlIcon from "../../img/icons/html5-brands.svg";
-import cssIcon from "../../img/icons/css3-alt-brands.svg";
-
 import HtmlIcon from "../../components/svgs/HtmlIcon";
 import CssIcon from "../svgs/CssIcon";
 import JavascriptIcon from "../svgs/JavascriptIcon";
