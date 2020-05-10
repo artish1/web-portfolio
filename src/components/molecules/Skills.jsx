@@ -35,15 +35,13 @@ const CenterContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  max-width: 1000px;
+  width: 90%;
+  max-width: ${({ theme }) => theme.maxBodyWidth};
   margin: 0px 10px;
 
   padding: 25px;
   box-sizing: border-box;
   box-shadow: 0px 0px 8px 3px #00000055;
-  // background-color: #efa48b;
-  // background-color: #111;
 `;
 
 const SkillsGrid = styled.div`
@@ -52,7 +50,7 @@ const SkillsGrid = styled.div`
   justify-items: center;
   gap: 25px;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
 
   padding: 0px 20px;
   box-sizing: border-box;

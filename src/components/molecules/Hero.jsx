@@ -37,15 +37,19 @@ const CenterContainer = styled.div`
 const Title = styled.span`
   font-family: "Josefin Sans", sans-serif;
 
-  font-size: 70px;
+  font-size: 90px;
   letter-spacing: 10px;
   font-weight: 300;
   text-transform: uppercase;
 
   color: ${({ theme }) => theme.heroTitleColor};
 
-  @media (max-width: 450px) {
+  @media (max-width: 545px) {
     font-size: 50px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 40px;
   }
 `;
 
@@ -55,8 +59,12 @@ const SubTitle = styled.span`
   font-family: "Josefin Sans", sans-serif;
   font-weight: 100;
   letter-spacing: 7px;
-
+  transform: scale(1.1);
   text-transform: uppercase;
+
+  @media (max-width: 500px) {
+    transform: scale(1);
+  }
 `;
 
 const NameContainer = styled.div``;
@@ -69,7 +77,9 @@ const NameContainer = styled.div``;
 */
 
 const HeroButton = styled(Button)`
-  // box-shadow: 0px 0px 10px 2px #00000088;
+  width: 90%;
+  height: 56px;
+  max-width: 450px;
 `;
 
 const Hero = () => {

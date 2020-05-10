@@ -19,8 +19,8 @@ const Root = styled.div`
 const Container = styled.div`
   margin: 50px 10px;
 
-  width: 100%;
-  max-width: 1000px;
+  width: 90%;
+  max-width: ${({ theme }) => theme.maxBodyWidth};
 
   padding: 25px;
   box-sizing: border-box;
@@ -90,6 +90,7 @@ const IconContainer = styled.a`
   color: ${({ theme }) => theme.buttonBackgroundColor};
   margin-bottom: 20px;
 
+  transition: color 0.25s linear;
   &:hover {
     color: white;
   }

@@ -25,15 +25,15 @@ import grace_7 from "../img/grace/grace_7.jpg";
 const examplePics = [imgTrash, imgPortfolio, imgGrace, imgWord];
 
 const projectData = [
-  {
-    title: "Portfolio Website",
-    description: "My personal portfolio website (This website).",
-    image: imgPortfolio,
-    webUrl: "https://www.markartishuk.com",
-    codeUrl: "https://www.github.com",
-    pictures: examplePics,
-    stack: ["React", "Styled-Components", "Basic HTML/Javascript/CSS"],
-  },
+  // {
+  //   title: "Portfolio Website",
+  //   description: "My personal portfolio website (This website).",
+  //   image: imgPortfolio,
+  //   webUrl: "https://www.markartishuk.com",
+  //   codeUrl: "https://www.github.com",
+  //   pictures: examplePics,
+  //   stack: ["React", "Styled-Components", "Basic HTML/Javascript/CSS"],
+  // },
   {
     title: "The Trash Panda",
     description:
