@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { Link } from "react-router-dom";
-
 const Root = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
   color: ${(props) =>
     props.isTop ? props.theme.heroTitleColor : props.theme.navTextColor};
-  // background-color: ${({ theme }) => theme.navBackgroundColor};
   background-color: ${(props) =>
     props.isTop ? "#00000000" : props.theme.navBackgroundColor};
   z-index: 100;
   transition: background-color 0.35s;
-
-
 `;
 
 const Container = styled.div`

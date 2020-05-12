@@ -8,7 +8,7 @@ const theme = {
 
   scrollLineColor: "white",
 
-  navBackgroundColor: "#222",
+  navBackgroundColor: "#14141c",
   navTextColor: "#f4f4ea",
 
   buttonBackgroundColor: "#ffaf8b",
