@@ -149,10 +149,12 @@ const ContactInfo = () => {
                 </CategoryTitle>
 
                 <AboutDescription>
-                  "Transforming ideas into a reality is something we all long to
-                  have. It's something I love to do. All I really want is to
-                  learn new things and be challenged, so that I can better
-                  myself with skill and value.""
+                  "Transforming ideas into a reality is a skill we all long to
+                  have. It's why I became a software engineer in the first
+                  place. I was born (and will always be) a problem solver, no
+                  matter the frustration that comes with being one. All I really
+                  want is to be challenged and succeed, so that I can better
+                  myself with the newfound knowledge."
                 </AboutDescription>
               </div>
 

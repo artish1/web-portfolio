@@ -46,7 +46,7 @@ const Footer = () => {
   return (
     <Root>
       <CenteredContainer>
-        <ArtifactsContainer>Artifacts here</ArtifactsContainer>
+        {/* <ArtifactsContainer>Artifacts here</ArtifactsContainer> */}
         <div>
           <Title>Mark Artishuk</Title>
           <Copyright>&copy; 2020</Copyright>
