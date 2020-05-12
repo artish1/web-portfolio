@@ -12,6 +12,7 @@ import PythonIcon from "../svgs/PythonIcon";
 import ReactIcon from "../svgs/ReactIcon";
 import ReduxIcon from "../svgs/ReduxIcon";
 import GitIcon from "../svgs/GitIcon";
+import PostgresIcon from "../svgs/PostgresIcon";
 
 const Root = styled.div`
   display: flex;
@@ -80,6 +81,9 @@ const Skills = () => {
           </Skill>
           <Skill title="NodeJS">
             <NodejsIcon />
+          </Skill>
+          <Skill title="PostgreSQL">
+            <PostgresIcon />
           </Skill>
           <Skill title="Java">
             <JavaIcon />
