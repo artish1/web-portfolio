@@ -235,7 +235,7 @@ const ProjectDetailsModal = ({
     return () => {
       window.removeEventListener("click", onModalClose);
     };
-  }, []);
+  }, [onClose]);
 
   const imageSize = "110px";
 

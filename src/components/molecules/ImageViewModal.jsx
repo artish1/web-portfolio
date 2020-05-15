@@ -114,7 +114,7 @@ const ImageViewModal = ({ pictures, start, onClose }) => {
 
     setCurrentIndex(next);
   };
-  const width = "700px";
+
   return (
     <Root height="82vh" width="94vw">
       <SlideContainer>

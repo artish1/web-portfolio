@@ -1,5 +1,4 @@
 // Project artifact images
-import imgPortfolio from "../img/project_portfolio.jpg";
 import imgTrash from "../img/project_trash.jpg";
 import imgGrace from "../img/project_grace.jpg";
 import imgWord from "../img/project_word.jpg";
@@ -22,18 +21,7 @@ import grace_5 from "../img/grace/grace_5.jpg";
 import grace_6 from "../img/grace/grace_6.jpg";
 import grace_7 from "../img/grace/grace_7.jpg";
 
-const examplePics = [imgTrash, imgPortfolio, imgGrace, imgWord];
-
 const projectData = [
-  // {
-  //   title: "Portfolio Website",
-  //   description: "My personal portfolio website (This website).",
-  //   image: imgPortfolio,
-  //   webUrl: "https://www.markartishuk.com",
-  //   codeUrl: "https://www.github.com",
-  //   pictures: examplePics,
-  //   stack: ["React", "Styled-Components", "Basic HTML/Javascript/CSS"],
-  // },
   {
     title: "The Trash Panda",
     description:
