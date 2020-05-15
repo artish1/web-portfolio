@@ -42,10 +42,6 @@ const Root = styled.div`
 
   box-sizing: border-box;
   border-radius: 4px;
-
-  // @media (max-width: 635px) {
-  //   width: 90vw;
-  // }
 `;
 
 const Container = styled.div`
@@ -147,7 +143,6 @@ const PictureGrid = styled.div`
   grid-template-columns: repeat(
     auto-fit,
     minmax(${(props) => props.imageSize}, 1fr)
-    // ${(props) => props.imageSize}
   );
 
   justify-items: center;
