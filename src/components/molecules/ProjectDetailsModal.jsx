@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import styled, { keyframes } from "styled-components";
 import closeIconImg from "../../img/close_icon.png";
@@ -221,6 +221,22 @@ const ProjectDetailsModal = ({
 }) => {
   const [slideModal, setSlideModal] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(0);
+
+  useEffect(() => {
+    //Close modal event
+    function onModalClose(event) {
+      const elem = event.target.closest(".modal");
+      if (!elem) onClose();
+    }
+
+    //Register
+    window.addEventListener("click", onModalClose);
+    //Cleanup
+    return () => {
+      window.removeEventListener("click", onModalClose);
+    };
+  }, []);
+
   const imageSize = "110px";
 
   const handlePictureClick = (clickedIndex) => {
@@ -229,7 +245,7 @@ const ProjectDetailsModal = ({
   };
 
   return (
-    <Root width="600px" height="73%">
+    <Root className="modal" width="600px" height="73%">
       {slideModal && (
         <ImageViewModal
           pictures={pictures}
