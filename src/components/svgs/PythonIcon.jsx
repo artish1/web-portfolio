@@ -7,7 +7,7 @@ const PythonIcon = () => {
       focusable="false"
       data-prefix="fab"
       data-icon="python"
-      class="svg-inline--fa fa-python fa-w-14"
+      className="svg-inline--fa fa-python fa-w-14"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"

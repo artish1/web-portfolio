@@ -7,7 +7,7 @@ const CssIcon = () => {
       focusable="false"
       data-prefix="fab"
       data-icon="css3-alt"
-      class="svg-inline--fa fa-css3-alt fa-w-12"
+      className="svg-inline--fa fa-css3-alt fa-w-12"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 384 512"
