@@ -45,8 +45,8 @@ const projectData = [
     description:
       "An informative church website that also handles donations, contact forms, event management, and more.",
     image: imgGrace,
-    webUrl: "https://www.google.com",
-    codeUrl: "https://www.github.com",
+    webUrl: "https://hardcore-beaver-0c3602.netlify.app/",
+    codeUrl: "https://github.com/GTCAG",
     pictures: [grace_1, grace_2, grace_3, grace_4, grace_5, grace_6, grace_7],
     stack: [
       "React",
