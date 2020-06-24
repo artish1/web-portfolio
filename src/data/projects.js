@@ -21,6 +21,12 @@ import grace_5 from "../img/grace/grace_5.jpg";
 import grace_6 from "../img/grace/grace_6.jpg";
 import grace_7 from "../img/grace/grace_7.jpg";
 
+// Kendra's portfolio
+import kendra1 from "../img/kendra_portfolio/kendra1.jpg";
+import kendra2 from "../img/kendra_portfolio/kendra2.jpg";
+import kendra3 from "../img/kendra_portfolio/kendra3.jpg";
+import kendra4 from "../img/kendra_portfolio/kendra4.jpg";
+
 const projectData = [
   {
     title: "The Trash Panda",
@@ -66,6 +72,16 @@ const projectData = [
     codeUrl: "https://github.com/artish1/React-Redux-App/tree/mark-artishuk",
     pictures: [imgWord, word_1, word_2],
     stack: ["React", "Material-UI", "Basic HTML/CSS/Javascript"],
+  },
+  {
+    title: "Kendra Mckernan Portfolio",
+    description:
+      "A portfolio website for a UI/UX developer by the name of Kendra Mckernan",
+    image: kendra1,
+    webUrl: "https://www.kendramckernan.com/",
+    codeUrl: "https://github.com/artish1/Kendra-portfolio",
+    pictures: [kendra1, kendra2, kendra3, kendra4],
+    stack: ["HTML", "CSS", "Javascript", "React", "Styled-components"],
   },
 ];
 
