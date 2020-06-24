@@ -36,11 +36,11 @@ const CenteredContainer = styled.div`
   flex-direction: column;
 `;
 
-const ArtifactsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+// const ArtifactsContainer = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// `;
 
 const Footer = () => {
   return (
