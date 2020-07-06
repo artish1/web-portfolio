@@ -35,8 +35,8 @@ const LinksContainer = styled.nav`
     text-decoration: none;
     color: ${(props) =>
       props.isTop ? props.theme.heroTitleColor : props.theme.navTextColor};
-    margin-left: 15px;
-    font-size: 20.5px;
+    margin-left: 18px;
+    font-size: 18px;
   }
 `;
 

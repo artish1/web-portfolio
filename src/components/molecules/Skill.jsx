@@ -28,7 +28,7 @@ const Title = styled.h2`
   color: #212121;
 `;
 
-const Skill = ({ image, title, children }) => {
+const Skill = ({ title, children }) => {
   const [open, setOpen] = useState(false);
   return (
     <Root
