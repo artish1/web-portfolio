@@ -13,6 +13,7 @@ import ReactIcon from "../svgs/ReactIcon";
 import ReduxIcon from "../svgs/ReduxIcon";
 import GitIcon from "../svgs/GitIcon";
 import PostgresIcon from "../svgs/PostgresIcon";
+import JestIcon from "../svgs/JestIcon";
 
 const Root = styled.div`
   display: flex;
@@ -93,6 +94,9 @@ const Skills = () => {
           </Skill>
           <Skill title="Git">
             <GitIcon />
+          </Skill>
+          <Skill title="Jest">
+            <JestIcon />
           </Skill>
         </SkillsGrid>
       </CenterContainer>

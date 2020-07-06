@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-const showAnim = keyframes`
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0.7;
-    }
-`;
-
 const Root = styled.div`
   position: relative;
   width: 50px;
@@ -24,11 +14,9 @@ const PopupContainer = styled.div`
   width: fit-content;
   min-width: 80px;
   height: fit-content;
-  transform: translate(-25%, -65px);
+  transform: translate(-25%, -60px);
   top: 0;
   color: black;
-  opacity: 0.8;
-  animation: ${showAnim} 0.25s linear;
   border-radius: 4px;
 `;
 
