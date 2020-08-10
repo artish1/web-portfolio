@@ -43,7 +43,7 @@ const LinksContainer = styled.nav`
 const NavBar = () => {
   const [isTop, setIsTop] = useState(true);
   const handleScroll = () => {
-    if (window.pageYOffset < 350) {
+    if (window.pageYOffset < 300) {
       setIsTop(true);
     } else setIsTop(false);
   };
