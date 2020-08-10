@@ -19,7 +19,6 @@ import grace_3 from "../img/grace/grace_3.jpg";
 import grace_4 from "../img/grace/grace_4.jpg";
 import grace_5 from "../img/grace/grace_5.jpg";
 import grace_6 from "../img/grace/grace_6.jpg";
-import grace_7 from "../img/grace/grace_7.jpg";
 
 // Kendra's portfolio
 import kendra1 from "../img/kendra_portfolio/kendra1.jpg";
@@ -49,11 +48,11 @@ const projectData = [
   {
     title: "GTCAG",
     description:
-      "An informative church website that also handles donations, contact forms, event management, and more.",
+      "An informative website that also handles donations, contact forms, event management, and more.",
     image: imgGrace,
     webUrl: "https://hardcore-beaver-0c3602.netlify.app/",
     codeUrl: "https://github.com/GTCAG",
-    pictures: [grace_1, grace_2, grace_3, grace_4, grace_5, grace_6, grace_7],
+    pictures: [grace_1, grace_2, grace_3, grace_4, grace_5, grace_6],
     stack: [
       "React",
       "Material-UI",
