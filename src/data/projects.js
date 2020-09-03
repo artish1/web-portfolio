@@ -33,7 +33,7 @@ const projectData = [
       "A PWA (Progressive Web App) that helps users know how and where to recycle through either category selection or image recognition.",
     image: imgTrash,
     webUrl: "https://www.thetrashpanda.com",
-    codeUrl: "https://www.github.com",
+    codeUrl: "https://github.com/Lambda-School-Labs/trashpanda-fe",
     pictures: [trash_1, trash_2, trash_3, trash_4, imgTrash],
     stack: [
       "React",
