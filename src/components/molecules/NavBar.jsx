@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import resume from "../../Mark_Artishuk_Resume.pdf";
 
 const Root = styled.div`
   position: fixed;
@@ -74,6 +75,7 @@ const NavBar = () => {
           <a onClick={(e) => handleClickScroll(e, "contact")} href="#contact">
             Contact
           </a>
+          <a href={resume}>Resume</a>
         </LinksContainer>
       </Container>
     </Root>
