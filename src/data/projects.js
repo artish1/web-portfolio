@@ -26,6 +26,13 @@ import kendra2 from "../img/kendra_portfolio/kendra2.jpg";
 import kendra3 from "../img/kendra_portfolio/kendra3.jpg";
 import kendra4 from "../img/kendra_portfolio/kendra4.jpg";
 
+// Ypp-Sim
+import yppsim1 from "../img/ypp-sim/ypp-sim1.jpg";
+import yppsim2 from "../img/ypp-sim/ypp-sim2.jpg";
+import yppsim3 from "../img/ypp-sim/ypp-sim3.jpg";
+import yppsim4 from "../img/ypp-sim/ypp-sim4.jpg";
+import yppsim5 from "../img/ypp-sim/ypp-sim5.jpg";
+
 const projectData = [
   {
     title: "The Trash Panda",
@@ -38,11 +45,32 @@ const projectData = [
     stack: [
       "React",
       "Styled-Components",
-      "Nodejs",
+      "Node.js",
       "GraphQL",
       "Apollo",
       "SQL",
       "Jest",
+    ],
+  },
+  {
+    name: "YPP-SIM",
+    description:
+      "A Puzzle Pirates blockade simulator puzzle game that has multiplayer features.",
+    image: yppsim1,
+    webUrl: "https://inspiring-montalcini-0480b6.netlify.app/",
+    codeUrl: "https://github.com/YPP-Sim",
+    pictures: [yppsim1, yppsim2, yppsim3, yppsim4, yppsim5],
+    stack: [
+      "React",
+      "Styled-components",
+      "PIXI.js",
+      "Socket.io/WebSockets",
+      "Node.js",
+      "Docker",
+      "Jest",
+      "Json Web Token (JWT)",
+      "Express",
+      "Nginx",
     ],
   },
   {
