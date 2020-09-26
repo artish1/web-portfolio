@@ -1,6 +1,7 @@
 // Project artifact images
 import imgTrash from "../img/project_trash.jpg";
 import imgGrace from "../img/project_grace.jpg";
+import imgYpp from "../img/project_ypp-sim.jpg";
 import imgWord from "../img/project_word.jpg";
 // Trash panda
 import trash_1 from "../img/trash_panda/trash_1.jpg";
@@ -27,7 +28,6 @@ import kendra3 from "../img/kendra_portfolio/kendra3.jpg";
 import kendra4 from "../img/kendra_portfolio/kendra4.jpg";
 
 // Ypp-Sim
-import yppsim1 from "../img/ypp-sim/ypp-sim1.jpg";
 import yppsim2 from "../img/ypp-sim/ypp-sim2.jpg";
 import yppsim3 from "../img/ypp-sim/ypp-sim3.jpg";
 import yppsim4 from "../img/ypp-sim/ypp-sim4.jpg";
@@ -53,13 +53,13 @@ const projectData = [
     ],
   },
   {
-    name: "YPP-SIM",
+    title: "YPP-SIM",
     description:
       "A Puzzle Pirates blockade simulator puzzle game that has multiplayer features.",
-    image: yppsim1,
+    image: imgYpp,
     webUrl: "https://inspiring-montalcini-0480b6.netlify.app/",
     codeUrl: "https://github.com/YPP-Sim",
-    pictures: [yppsim1, yppsim2, yppsim3, yppsim4, yppsim5],
+    pictures: [imgYpp, yppsim2, yppsim3, yppsim4, yppsim5],
     stack: [
       "React",
       "Styled-components",
