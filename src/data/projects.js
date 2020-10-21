@@ -57,7 +57,7 @@ const projectData = [
     description:
       "A Puzzle Pirates blockade simulator puzzle game that has multiplayer features.",
     image: imgYpp,
-    webUrl: "https://inspiring-montalcini-0480b6.netlify.app/",
+    webUrl: "https://www.yppsim.com/",
     codeUrl: "https://github.com/YPP-Sim",
     pictures: [imgYpp, yppsim2, yppsim3, yppsim4, yppsim5],
     stack: [
@@ -68,6 +68,8 @@ const projectData = [
       "Node.js",
       "Docker",
       "Jest",
+      "Redis",
+      "MongoDB",
       "Json Web Token (JWT)",
       "Express",
       "Nginx",
