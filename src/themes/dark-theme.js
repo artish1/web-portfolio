@@ -11,10 +11,10 @@ const theme = {
   navBackgroundColor: "#14141c",
   navTextColor: "#f4f4ea",
 
-  buttonBackgroundColor: "#ffaf8b",
-  buttonTextColor: "white",
+  buttonBackgroundColor: "#ffad89",
+  wedgeColor: "#ffad89",
 
-  wedgeColor: "#ffcba4",
+  buttonTextColor: "#434343",
 
   maxBodyWidth: "1250px",
 };

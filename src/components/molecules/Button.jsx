@@ -12,13 +12,9 @@ const Container = styled.button`
     props.backgroundColor || props.theme.buttonBackgroundColor};
   color: ${(props) => props.color || props.theme.buttonTextColor};
 
-  // background-image: linear-gradient(0.40turn, #ffa500, #ffcba4);
 
   font-size: 17.5px;
-
-  // font-family: "Josefin Sans", sans-serif;
   font-family: "Montserrat";
-  // font-family: "Quicksand", sans-serif;
   font-weight: 300;
 
   margin: ${(props) => props.margin};
@@ -40,7 +36,17 @@ const Container = styled.button`
   }
 `;
 
+const SecondaryButton = styled(Container)`
+  background-color: rgb(58 49 50);
+  color: white;
+  &:hover {
+    background-color: rgb(33 29 30);
+  }
+`;
+
 const Button = (props) => {
+  if(props.secondary) return <SecondaryButton {...props}>{props.children}</SecondaryButton>
+
   return <Container {...props}>{props.children}</Container>;
 };
 

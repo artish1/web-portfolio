@@ -9,7 +9,7 @@ import Footer from "../molecules/Footer";
 import Skills from "../molecules/Skills";
 
 const Box = styled.div`
-  background-color: #ffcba4;
+  background-color: ${({theme}) => theme.buttonBackgroundColor};
   height: 400px;
 `;
 

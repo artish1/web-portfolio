@@ -99,7 +99,6 @@ const Hero = () => {
 
         <HeroButton
           onClick={handleClick}
-          color="white"
           margin="25px 0px 0px 0px"
           width="350px"
         >
