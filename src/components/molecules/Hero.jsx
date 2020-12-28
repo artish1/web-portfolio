@@ -1,6 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
+import SlideUp from "../SlideUp";
 import Button from "./Button";
 
 const Root = styled.div`
@@ -34,9 +35,11 @@ const CenterContainer = styled.div`
   transform: translateY(-80px);
 `;
 
-const Title = styled.span`
+const Title = styled.p`
   font-family: "Josefin Sans", sans-serif;
-
+  margin: 0;
+  margin-bottom: 18px;
+  height: 70px;
   font-size: 90px;
   letter-spacing: 10px;
   font-weight: 300;
@@ -67,15 +70,6 @@ const SubTitle = styled.span`
   }
 `;
 
-const NameContainer = styled.div``;
-
-/*
- primary: #c07c84,
-  secondary: #6c5b7b,
-  accent: #fffcf1,
-  texts: #05386b
-*/
-
 const HeroButton = styled(Button)`
   width: 90%;
   height: 56px;
@@ -92,18 +86,18 @@ const Hero = () => {
   return (
     <Root>
       <CenterContainer>
-        <NameContainer>
+        <SlideUp>
           <Title>Mark Artishuk</Title>
-        </NameContainer>
-        <SubTitle>Software Engineer</SubTitle>
+        </SlideUp>
+        <SlideUp delay="0.2s">
+          <SubTitle>Software Engineer</SubTitle>
+        </SlideUp>
 
-        <HeroButton
-          onClick={handleClick}
-          margin="25px 0px 0px 0px"
-          width="350px"
-        >
-          View my work
-        </HeroButton>
+        <SlideUp width="100%" delay="0.4s">
+          <HeroButton onClick={handleClick} margin="25px 0px 0px 0px">
+            View my work
+          </HeroButton>
+        </SlideUp>
       </CenterContainer>
     </Root>
   );
