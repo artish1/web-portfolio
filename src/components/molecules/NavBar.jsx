@@ -10,7 +10,7 @@ const Root = styled.div`
     props.isTop ? props.theme.heroTitleColor : props.theme.navTextColor};
   background-color: ${(props) =>
     props.isTop ? "#00000000" : props.theme.navBackgroundColor};
-  z-index: 100;
+  z-index: 2;
   transition: background-color 0.35s;
 `;
 

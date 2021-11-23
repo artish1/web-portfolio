@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Mark Artishuk",
+  "name": "Mark Artishuk - Portfolio",
   "icons": [
     {
       "src": "favicon-32x32.png",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#f4f4ea",
+  "background_color": "#14141c"
 }
