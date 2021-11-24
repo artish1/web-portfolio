@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "./molecules/Loader";
 import { resourceLoader } from "../util/resourceLoader";
+import { AppStateContext } from "../contexts/AppStateContext";
 
 const Root = styled.div`
   transition: all 0.7s cubic-bezier(1, 0.01, 0.29, 1.01);
@@ -23,6 +24,7 @@ const Root = styled.div`
 const AppLoading = () => {
   const [finished, setFinished] = useState(false); // Is true when outro animation for Spinner is done
   const [loaded, setLoaded] = useState(false);
+  const { setAppState, appState } = useContext(AppStateContext);
   useEffect(() => {
     const unsubscribe = resourceLoader.subscribe(() => {
       setLoaded(true);
@@ -32,7 +34,11 @@ const AppLoading = () => {
   }, []);
 
   return (
-    <Root isFinished={finished}>
+    <Root
+      isFinished={finished}
+      onTransitionEnd={() => {
+        if (finished) setAppState({ ...appState, resourcesLoaded: true });
+      }}>
       <Loader
         fixedCenter
         fadeOut={loaded}

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import styled from "styled-components";
+import { AppStateContext } from "../../contexts/AppStateContext";
 import SlideUp from "../SlideUp";
 import Button from "./Button";
 
@@ -57,12 +58,12 @@ const Title = styled.p`
 `;
 
 const SubTitle = styled.span`
-  font-size: 23px;
-  margin-top: 15px;
+  display: block;
+  font-size: 27px;
+  margin-top: 8px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 100;
   letter-spacing: 7px;
-  transform: scale(1.1);
   text-transform: uppercase;
 
   @media (max-width: 500px) {
@@ -77,6 +78,10 @@ const HeroButton = styled(Button)`
 `;
 
 const Hero = () => {
+  const {
+    appState: { resourcesLoaded },
+  } = useContext(AppStateContext);
+
   const handleClick = () => {
     document
       .getElementById("projects")
@@ -86,15 +91,15 @@ const Hero = () => {
   return (
     <Root>
       <CenterContainer>
-        <SlideUp>
+        <SlideUp skip={!resourcesLoaded}>
           <Title>Mark Artishuk</Title>
         </SlideUp>
-        <SlideUp delay="0.2s">
+        <SlideUp delay="0.25s" skip={!resourcesLoaded}>
           <SubTitle>Software Engineer</SubTitle>
         </SlideUp>
 
-        <SlideUp width="100%" delay="0.4s">
-          <HeroButton onClick={handleClick} margin="25px 0px 0px 0px">
+        <SlideUp width="100%" delay="0.45s" skip={!resourcesLoaded}>
+          <HeroButton onClick={handleClick} margin="40px 0px 0px 0px">
             View my work
           </HeroButton>
         </SlideUp>

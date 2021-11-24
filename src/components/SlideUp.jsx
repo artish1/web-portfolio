@@ -1,15 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styled, { keyframes } from "styled-components";
-
-const slideUpAnim = keyframes`
-    from {
-        transform: translateY(200px);
-    }
-
-    to {
-        transform: translateY(0px);
-    }
-`;
+import styled from "styled-components";
 
 const Root = styled.div`
   width: ${(props) => props.width};
@@ -17,24 +7,29 @@ const Root = styled.div`
 `;
 
 const SlidingContainer = styled.div`
-  animation: ${slideUpAnim} 0.6s ease-out;
-  animation-delay: ${(props) => props.delay || "0s"};
-  opacity: ${(props) => (props.visible ? "100%" : "0%")};
+  transform: ${({ visible }) =>
+    visible ? "translateY(0px)" : "translateY(150%)"};
+  transition: all 0.6s ease-out;
 `;
 
 const SlideUp = (props) => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
+    if (props.skip) return;
+
     if (props.delay) {
-      setVisible(false);
+      if (visible) setVisible(false);
       const stringDelay = props.delay.replace("s", "");
       const msDelay = (parseFloat(stringDelay) + 0.1) * 1000;
       setTimeout(() => setVisible(true), msDelay);
+    } else {
+      setVisible(true);
     }
-  }, [props.delay]);
+  }, [props]);
 
   return (
-    <Root width={props.width}>
+    <Root {...props}>
       <SlidingContainer visible={visible} {...props}>
         {props.children}
       </SlidingContainer>

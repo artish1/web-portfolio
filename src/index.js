@@ -9,13 +9,16 @@ import { ThemeProvider } from "styled-components";
 
 // Themes
 import defaultTheme from "./themes/dark-theme";
+import { AppStateProvider } from "./contexts/AppStateContext";
 // import lightTheme from "./themes/light-theme";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <ThemeProvider theme={defaultTheme}>
-        <App />
+        <AppStateProvider>
+          <App />
+        </AppStateProvider>
       </ThemeProvider>
     </Router>
   </React.StrictMode>,
